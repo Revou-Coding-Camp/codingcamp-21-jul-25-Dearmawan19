@@ -1,0 +1,359 @@
+.filter-group {
+  position: relative;
+}
+.filter-popup {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  min-width: 120px;
+  z-index: 10;
+  padding: 0.3rem 0.2rem;
+  display: none;
+}
+.filter-option {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  color: var(--text);
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.filter-option:hover {
+  background: var(--highlight);
+  color: #fff;
+}
+:root {
+  --bg: #fff;
+  --text: #333;
+  --card: #f4f4f4;
+  --border: #ccc;
+  --highlight: #ff00ff;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #eee;
+  --card: #1f1f1f;
+  --border: #444;
+  --highlight: #00ffff;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  transition: 0.3s;
+  padding: 2rem;
+}
+
+.container {
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.theme-toggle {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+#themeBtn {
+  padding: 0.4rem 1rem;
+  background: var(--highlight);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card {
+  flex: 1;
+  padding: 1rem;
+  background: var(--card);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.card span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 2px solid var(--highlight);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+#add-btn {
+  padding: 0.6rem 1rem;
+  background: var(--highlight);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.action-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.action-bar input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.filter-select {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+
+.filter-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  background: #eee;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: var(--highlight);
+  color: white;
+}
+
+.danger {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  text-align: left;
+  padding: 0.75rem;
+  background: var(--card);
+}
+
+tbody td {
+  padding: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: #f4f4f4;
+  padding: 0.4rem 0.7rem;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  margin: 0 2px;
+  transition: background 0.15s, color 0.15s;
+}
+button[title="Edit Task"] {
+  background: #ffe082;
+  color: #222;
+}
+button[title="Edit Task"]:hover {
+  background: #ffd54f;
+}
+button[title="Mark as Done"] {
+  background: #b2f2bb;
+  color: #222;
+}
+button[title="Mark as Done"]:hover {
+  background: #69db7c;
+}
+button[title="Delete"] {
+  background: #ffb3b3;
+  color: #222;
+}
+button[title="Delete"]:hover {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+.center-empty {
+  text-align: center !important;
+  font-size: 1.1rem;
+  color: #aaa;
+  padding: 2.5rem 0 !important;
+}
+
+table {
+  background: var(--bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+
+/* Custom Modal Styles */
+.custom-modal-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30,30,40,0.25);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-modal {
+  background: #fff;
+  color: #222;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 2.2rem 2.5rem 1.5rem 2.5rem;
+  min-width: 340px;
+  max-width: 90vw;
+  text-align: left;
+  animation: modalIn 0.18s cubic-bezier(.4,2,.6,1);
+}
+.custom-modal h2 {
+  margin: 0 0 0.7rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.custom-modal p {
+  margin: 0 0 1.5rem 0;
+  color: #444;
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.modal-cancel {
+  background: none;
+  border: none;
+  color: #222;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 7px;
+  transition: background 0.15s;
+}
+.modal-cancel:hover {
+  background: #f2f2f2;
+}
+.modal-confirm {
+  background: #ff6b6b;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 7px;
+  transition: background 0.15s;
+}
+.modal-confirm:hover {
+  background: #ff3b3b;
+}
+@keyframes modalIn {
+  from { transform: translateY(40px) scale(0.98); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+
+/* Toast Styles */
+.custom-toast {
+  position: fixed;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%) scale(0.98);
+  background: #222;
+  color: #fff;
+  padding: 0.9rem 2.2rem;
+  border-radius: 12px;
+  font-size: 1.08rem;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2000;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.custom-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* Progress Bar Styles */
+.progress-bar-container {
+  width: 100%;
+  margin: 1.5rem 0 2rem 0;
+  height: 22px;
+  display: flex;
+  align-items: center;
+}
+.progress-bar-bg {
+  width: 100%;
+  height: 18px;
+  background: linear-gradient(90deg, var(--card) 60%, var(--border) 100%);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--highlight) 60%, #ffb347 100%);
+  border-radius: 10px 0 0 10px;
+  transition: width 0.4s cubic-bezier(.4,2,.6,1);
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
